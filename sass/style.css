@@ -68,6 +68,12 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 40px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 500px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 footer .lien_wiggle {
   font-size: 20px;
@@ -177,11 +183,6 @@ footer .lien_wiggle {
   }
 }
 @media screen and (max-width: 800px) {
-  body {
-    height: 100%;
-    width: auto;
-  }
-
   header, footer {
     height: 100px;
   }
@@ -201,8 +202,23 @@ footer .lien_wiggle {
   }
 
   .lien_transition {
-    width: auto;
+    height: auto;
     font-size: 15px;
+    cursor: default;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: -webkit-transform 500ms;
+    transition: -webkit-transform 500ms;
+    transition: transform 500ms;
+    transition: transform 500ms, -webkit-transform 500ms;
+  }
+  .lien_transition:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  footer {
+    height: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

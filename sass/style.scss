@@ -67,6 +67,11 @@ footer {
     margin-top: 50px;
     justify-content: space-between;
     height: 40px;
+    position: sticky;
+    top: 500px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     .lien_wiggle{
         font-size: 20px;
         text-align: justify;
@@ -93,10 +98,6 @@ footer {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
   @media screen and (max-width: 800px) {
-    body {
-      height: 100%;
-      width: auto;
-    }
   
     header {
       height: 100px;
@@ -115,8 +116,19 @@ footer {
       margin: 10px;
     }
     .lien_transition{
-      width: auto;
+      height: auto;
       font-size: 15px ;
+        cursor: default;
+        transform: scale(1);
+        transition: transform 500ms;
+         &:hover {
+        transform: scale(1.2);
+
+      }
     }
+    footer{
+      height: 50px;
+    }
+
   }
      
