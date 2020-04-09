@@ -1,4 +1,4 @@
-footer, .lien_transition, .button, .menu, header {
+div, section aside, .container, header, footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,70 +14,97 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #FBC02D;
   background-size: cover;
+  cursor: default;
 }
-body header {
+body header, body footer {
   background-color: #00897B;
 }
 body footer {
   background-color: #00897B;
 }
 
-header {
+header, footer {
   width: 100%;
   height: 250px;
-  padding-bottom: 50px;
 }
 
 h1 {
   font-size: 110px;
 }
 
-.menu {
-  margin-top: 100px;
-  margin-bottom: 50px;
+h2 {
+  text-align: center;
+  font-size: 35px;
 }
 
-img {
-  margin: 40px;
-  width: 200px;
-  height: 250px;
-  -webkit-filter: drop-shadow(0 0 0.75rem lightgrey);
-          filter: drop-shadow(0 0 0.75rem lightgrey);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+section {
+  background-color: #FFD9C9;
+  color: #000;
+  width: 50%;
+  margin: 60px;
 }
-img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  opacity: 0.4;
-}
-
-.lien {
-  background-color: #00897B;
-  color: #FBC02D;
-  text-decoration: none;
+section aside {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.lien_transition {
+.bg-color {
+  background-color: white;
+  color: #B3F4C6;
+}
+
+h3 {
   width: 300px;
   font-size: 25px;
-  border-radius: 10px;
-  cursor: default;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
-  padding-bottom: 10px;
+  text-transform: uppercase;
 }
-.lien_transition:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+
+h3:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px rgba(0, 0, 0, 0.8);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+h3:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+div {
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+div p {
+  text-align: left;
+  line-height: 32px;
+  margin: 0px 70px 0px 70px;
+  padding: 5px;
+}
+
+.prix {
+  text-align: right;
 }
 
 footer {
@@ -85,7 +112,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 50px;
+  height: 40px;
   position: -webkit-sticky;
   position: sticky;
   top: 500px;
@@ -95,9 +122,11 @@ footer {
 }
 footer .lien_wiggle {
   font-size: 20px;
-  height: 40px;
   text-align: justify;
   margin: 10px 10px 0px 10px;
+  background-color: #00897B;
+  color: #FBC02D;
+  text-decoration: none;
 }
 
 .lien_wiggle:hover {
@@ -200,45 +229,4 @@ footer .lien_wiggle {
             transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-@media screen and (max-width: 812px) {
-  header {
-    height: 75px;
-  }
-  header h1 {
-    font-size: 40px;
-  }
-
-  .menu {
-    width: 100%;
-    height: 100%;
-    margin-top: 70px;
-    margin-bottom: 70px;
-  }
-
-  img {
-    width: 90px;
-    height: 110px;
-    margin: 20px;
-  }
-
-  .lien_transition {
-    height: auto;
-    font-size: 15px;
-    cursor: default;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transition: -webkit-transform 500ms;
-    transition: -webkit-transform 500ms;
-    transition: transform 500ms;
-    transition: transform 500ms, -webkit-transform 500ms;
-  }
-  .lien_transition:hover {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-
-  footer {
-    height: 50px;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style2.css.map */

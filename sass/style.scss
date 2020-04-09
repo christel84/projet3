@@ -26,20 +26,29 @@ header {
   @extend %header;
   width: 100%;
   height: 250px;
-    
+  padding-bottom: 50px;
 }
 h1{
     font-size: 110px;
     }
 .menu{
  @extend %header;
+ margin-top: 100px;
+ margin-bottom: 50px;
 }
 img {
-        margin: 40px;
-        width: 150px;
-        height: 200px;
-        filter: drop-shadow(0 0 0.75rem lightgrey);
-      } 
+  margin: 40px;
+  width: 200px;
+  height: 250px;
+  filter: drop-shadow(0 0 0.75rem lightgrey);
+  transform: scale(1);
+  transition: transform 500ms;
+
+&:hover{
+  transform: scale(1.1);
+  opacity: .4;
+}
+} 
 .lien{
     background-color: $color-primary;
     color:$color-text;
@@ -56,17 +65,18 @@ img {
         cursor: default;
         transform: scale(1);
         transition: transform 500ms;
+        padding-bottom: 10px;
          &:hover {
-        transform: scale(1.5);
+        transform: scale(1.2);
         
         }
     }
     
 footer {
-  @extend header;
+  @extend %header;
     margin-top: 50px;
     justify-content: space-between;
-    height: 40px;
+    height: 50px;
     position: sticky;
     top: 500px;
     left: 0px;
@@ -74,9 +84,9 @@ footer {
     bottom: 0px;
     .lien_wiggle{
         font-size: 20px;
+        height: 40px;
         text-align: justify;
-        padding: 5px 10px 5px 10px;
-        margin: 0px 10px 0px 10px;
+        margin: 10px 10px 0px 10px;
     }
     
   } 
@@ -97,10 +107,10 @@ footer {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 812px) {
   
     header {
-      height: 100px;
+      height: 75px;
       h1 {
       font-size: 40px;
       }
@@ -108,16 +118,19 @@ footer {
     .menu{
         width: 100%;
         height: 100%;
-    
+        margin-top: 70px;
+        margin-bottom: 70px;
     }
     img {
-      width: 80px;
-      height: 100px;
-      margin: 10px;
+      width: 90px;
+      height: 110px;
+      margin: 20px;
+
+      
     }
     .lien_transition{
       height: auto;
-      font-size: 15px ;
+      font-size: 15px;
         cursor: default;
         transform: scale(1);
         transition: transform 500ms;
