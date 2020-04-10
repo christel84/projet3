@@ -67,17 +67,6 @@ img:hover {
   font-size: 25px;
   border-radius: 10px;
   cursor: default;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
-  padding-bottom: 10px;
-}
-.lien_transition:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 footer {
@@ -216,25 +205,15 @@ footer .lien_wiggle {
   }
 
   img {
-    width: 90px;
-    height: 110px;
-    margin: 20px;
+    width: 150px;
+    height: 210px;
+    margin: 15px 10px;
   }
 
   .lien_transition {
     height: auto;
     font-size: 15px;
     cursor: default;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transition: -webkit-transform 500ms;
-    transition: -webkit-transform 500ms;
-    transition: transform 500ms;
-    transition: transform 500ms, -webkit-transform 500ms;
-  }
-  .lien_transition:hover {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
   }
 
   footer {

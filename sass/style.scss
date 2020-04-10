@@ -63,13 +63,6 @@ img {
         font-size: 25px;
         border-radius: 10px;
         cursor: default;
-        transform: scale(1);
-        transition: transform 500ms;
-        padding-bottom: 10px;
-         &:hover {
-        transform: scale(1.2);
-        
-        }
     }
     
 footer {
@@ -122,9 +115,9 @@ footer {
         margin-bottom: 70px;
     }
     img {
-      width: 90px;
-      height: 110px;
-      margin: 20px;
+      width: 150px;
+      height: 210px;
+      margin: 15px 10px;
 
       
     }
@@ -132,12 +125,6 @@ footer {
       height: auto;
       font-size: 15px;
         cursor: default;
-        transform: scale(1);
-        transition: transform 500ms;
-         &:hover {
-        transform: scale(1.2);
-
-      }
     }
     footer{
       height: 50px;
