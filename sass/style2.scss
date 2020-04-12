@@ -10,11 +10,11 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: $color-text;
     background-size: cover; 
     cursor: default;
     header{
         background-color:$color-primary; 
+        color: $color-text;
     }
     footer{
       background-color: $color-primary; 
@@ -51,8 +51,11 @@ section{
     }
 }
 .bg-color{
-    background-color: white;
-    color: #B3F4C6;
+    background-color: white; 
+    background: -webkit-linear-gradient(#e66465, #9198e5);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
 }
 .titre{
     @extend %header;
@@ -89,7 +92,7 @@ div{
     p{
         text-align: left;
         line-height: 32px;
-        margin: 0px 70px 0px 70px;
+        margin: 0px 10px 0px 10px;
         padding: 5px;  
     }
 }
@@ -99,6 +102,7 @@ div{
 .img_bas{
     @extend %header;
     width: 50%;
+    font-weight: bold;
     img{
     width: 80px;
     height: 100px;

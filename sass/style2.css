@@ -12,12 +12,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #FBC02D;
   background-size: cover;
   cursor: default;
 }
 body header, body footer {
   background-color: #00897B;
+  color: #FBC02D;
 }
 body footer {
   background-color: #00897B;
@@ -59,7 +59,10 @@ section aside {
 
 .bg-color {
   background-color: white;
-  color: #B3F4C6;
+  background: -webkit-linear-gradient(#e66465, #9198e5);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .titre {
@@ -115,7 +118,7 @@ div {
 div p {
   text-align: left;
   line-height: 32px;
-  margin: 0px 70px 0px 70px;
+  margin: 0px 10px 0px 10px;
   padding: 5px;
 }
 
@@ -125,6 +128,7 @@ div p {
 
 .img_bas {
   width: 50%;
+  font-weight: bold;
 }
 .img_bas img {
   width: 80px;
