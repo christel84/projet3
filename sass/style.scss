@@ -7,6 +7,7 @@ $color-text: #FBC02D;
   justify-content: center;
   text-align: center;
 }
+
 body{
     margin: 0;
     padding: 0;
@@ -25,17 +26,21 @@ body{
 header {
   @extend %header;
   width: 100%;
-  height: 250px;
-  padding-bottom: 50px;
-}
-h1{
+  height: 200px;
+  padding-bottom: 65px;
+  
+  h1{
     font-size: 110px;
     }
+}
+
+
 .menu{
  @extend %header;
  margin-top: 100px;
  margin-bottom: 50px;
 }
+
 img {
   margin: 40px;
   width: 200px;
@@ -44,27 +49,58 @@ img {
   transform: scale(1);
   transition: transform 500ms;
 
-&:hover{
-  transform: scale(1.1);
-  opacity: .4;
+  &:hover{
+    transform: scale(1.1);
+    opacity: .4;
+  }
 }
-} 
+
 .lien{
     background-color: $color-primary;
     color:$color-text;
     text-decoration: none;
 }
-.button {
+
+.download{
     @extend %header;
-}
     .lien_transition{
-      @extend %header;
+      text-align: center;
+        padding: 10px;
         width: 300px;
         font-size: 25px;
-        border-radius: 10px;
+        border-radius: 15px;
         cursor: default;
     }
-    
+}
+
+.cercle{
+  display: inline-block;
+  background: #575756;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  //border: 2px solid black;
+  
+  //translate: (10%);
+  //transition: translate 0.5s cubic-bezier(.77,0,.18,1);
+  animation: silde 3s infinite;
+
+  &:nth-of-type(1) {
+    animation-delay: 0.15s;
+  }
+
+  @keyframes silde{
+    from {
+      transform: translateX(0) ;
+      opacity: 1;
+    }
+    to {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+  }
+}
+
 footer {
   @extend %header;
     margin-top: 50px;
@@ -83,10 +119,12 @@ footer {
     }
     
   } 
+
   .lien_wiggle:hover{
     animation: shake 1s;
     animation-iteration-count:infinite;
   }
+  
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -100,35 +138,4 @@ footer {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
-  @media screen and (max-width: 812px) {
-  
-    header {
-      height: 75px;
-      h1 {
-      font-size: 40px;
-      }
-    }
-    .menu{
-        width: 100%;
-        height: 100%;
-        margin-top: 70px;
-        margin-bottom: 70px;
-    }
-    img {
-      width: 150px;
-      height: 210px;
-      margin: 15px 10px;
-
-      
-    }
-    .lien_transition{
-      height: auto;
-      font-size: 15px;
-        cursor: default;
-    }
-    footer{
-      height: 50px;
-    }
-
-  }
      

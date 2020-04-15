@@ -1,4 +1,4 @@
-.img_bas, div, .titre, section aside, .container, header, footer {
+footer, .la-note-enchantee .img_bas, .la-note-enchantee .titre, .aside, .container, header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,7 @@ body {
   background-size: cover;
   cursor: default;
 }
-body header, body footer {
+body header {
   background-color: #00897B;
   color: #FBC02D;
 }
@@ -23,49 +23,61 @@ body footer {
   background-color: #00897B;
 }
 
-header, footer {
+header {
   width: 100%;
   height: 250px;
 }
-
-h1 {
+header h1 {
   font-size: 110px;
 }
 
 h2 {
   text-align: center;
   font-size: 35px;
-  margin: 0px;
+  margin: 10px 0px 70px 0px;
 }
 
-section {
-  background-color: #FFD9C9;
-  color: #000;
+.container {
+  font-family: cursive;
+}
+.container .bg-color {
   width: 50%;
   margin: 60px;
 }
-section aside {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
+
+h3 {
+  font-size: 25px;
+}
+
+.aside {
+  width: 100%;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.aside .colonne1 {
+  text-align: left;
+  line-height: 32px;
+  margin: 0px 10px 0px 10px;
+  padding: 5px;
 }
 
-.bg-color {
-  background-color: white;
-  background: -webkit-linear-gradient(#e66465, #9198e5);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+.colonne2 {
+  text-align: right;
+  line-height: 32px;
+  padding: 5px 0px 10px;
+  margin-top: 0px;
 }
 
-.titre {
+.la-note-enchantee .bg-color {
+  background-color: #FFD9C9;
+  color: #000;
+}
+.la-note-enchantee .titre {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -76,20 +88,14 @@ section aside {
   height: 200px;
   margin-bottom: 60px;
 }
-
-img {
+.la-note-enchantee img {
+  width: 100px;
   margin: 0px 0px 5px;
 }
-
-h3 {
-  width: 300px;
-  font-size: 25px;
-}
-
-h3:after {
+.la-note-enchantee h3:after {
   display: block;
   content: "";
-  border-bottom: solid 3px rgba(0, 0, 0, 0.8);
+  border-bottom: solid 3px #313030;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -99,44 +105,94 @@ h3:after {
   -webkit-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
 }
-
-h3:hover:after {
+.la-note-enchantee h3:hover:after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
-
-div {
+.la-note-enchantee .img_bas {
   width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-div p {
-  text-align: left;
-  line-height: 32px;
-  margin: 0px 10px 0px 10px;
-  padding: 5px;
-}
-
-.prix {
-  text-align: right;
-}
-
-.img_bas {
-  width: 50%;
   font-weight: bold;
 }
-.img_bas img {
+.la-note-enchantee .img_bas img {
+  margin: 0px 0px 5px;
   width: 80px;
   height: 100px;
   margin-bottom: 90px;
 }
-.img_bas p {
+.la-note-enchantee .img_bas .undertitle {
   margin: 50px 0px 0px 0px;
+}
+
+.le-chic-a-la-francaise .bg-color {
+  background: -webkit-gradient(linear, left top, right top, from(#e66465), to(#9198e5));
+  background: linear-gradient(to right, #e66465, #9198e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.le-chic-a-la-francaise h3:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #FFCCC7;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.le-chic-a-la-francaise h3:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.le-delice-des-papilles .bg-color {
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #3839FF), color-stop(75%, #94D8FF));
+  background: linear-gradient(to right, #3839FF 10%, #94D8FF 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.le-delice-des-papilles h3:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #799CFF;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.le-delice-des-papilles h3:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.la-palette-du-gout .bg-color {
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #54D473), color-stop(75%, #CDEBB0));
+  background: linear-gradient(to right, #54D473 5%, #CDEBB0 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.la-palette-du-gout h3:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #CFFFA3;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.la-palette-du-gout h3:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 footer {
