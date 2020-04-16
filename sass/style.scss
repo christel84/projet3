@@ -2,7 +2,12 @@
 $color-primary: #00897B;
 $color-text: #FBC02D;
 
-%header{
+%zoom{
+  width: 200px;
+  height: 250px;
+}
+
+%flexbox{
   display: flex;
   justify-content: center;
   text-align: center;
@@ -24,7 +29,7 @@ body{
 }
 
 header {
-  @extend %header;
+  @extend %flexbox;
   width: 100%;
   height: 200px;
   padding-bottom: 65px;
@@ -36,21 +41,28 @@ header {
 
 
 .menu{
- @extend %header;
+ @extend %flexbox;
  margin-top: 100px;
  margin-bottom: 50px;
 }
 
-img {
-  margin: 40px;
-  width: 200px;
-  height: 250px;
+.zoom{
+  @extend %zoom;
+  overflow: hidden;
+  margin: 30px;
   filter: drop-shadow(0 0 0.75rem lightgrey);
+  a{
+    display: inline-block;
+  }
+}
+
+img {
+  @extend %zoom;
   transform: scale(1);
   transition: transform 500ms;
 
   &:hover{
-    transform: scale(1.1);
+    transform: scale(1.3);
     opacity: .4;
   }
 }
@@ -62,7 +74,7 @@ img {
 }
 
 .download{
-    @extend %header;
+    @extend %flexbox;
     .lien_transition{
       text-align: center;
         padding: 10px;
@@ -79,14 +91,14 @@ img {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  //border: 2px solid black;
-  
-  //translate: (10%);
-  //transition: translate 0.5s cubic-bezier(.77,0,.18,1);
   animation: silde 3s infinite;
 
   &:nth-of-type(1) {
     animation-delay: 0.15s;
+  }
+
+  &:nth-of-type(2){
+    animation-delay: 0.20s;
   }
 
   @keyframes silde{
@@ -95,14 +107,14 @@ img {
       opacity: 1;
     }
     to {
-      transform: translateX(100px);
+      transform: translateX(50px);
       opacity: 0;
     }
   }
 }
 
 footer {
-  @extend %header;
+  @extend %flexbox;
     margin-top: 50px;
     justify-content: space-between;
     height: 50px;

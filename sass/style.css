@@ -1,3 +1,8 @@
+img, .zoom {
+  width: 200px;
+  height: 250px;
+}
+
 footer, .download, .menu, header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,12 +41,17 @@ header h1 {
   margin-bottom: 50px;
 }
 
-img {
-  margin: 40px;
-  width: 200px;
-  height: 250px;
+.zoom {
+  overflow: hidden;
+  margin: 30px;
   -webkit-filter: drop-shadow(0 0 0.75rem lightgrey);
           filter: drop-shadow(0 0 0.75rem lightgrey);
+}
+.zoom a {
+  display: inline-block;
+}
+
+img {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform 500ms;
@@ -50,8 +60,8 @@ img {
   transition: transform 500ms, -webkit-transform 500ms;
 }
 img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   opacity: 0.4;
 }
 
@@ -83,6 +93,10 @@ img:hover {
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
 }
+.cercle:nth-of-type(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
 @-webkit-keyframes silde {
   from {
     -webkit-transform: translateX(0);
@@ -90,8 +104,8 @@ img:hover {
     opacity: 1;
   }
   to {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
     opacity: 0;
   }
 }
@@ -102,8 +116,8 @@ img:hover {
     opacity: 1;
   }
   to {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
     opacity: 0;
   }
 }
