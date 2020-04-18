@@ -1,31 +1,121 @@
-@media screen and (min-width: 320px) and (max-width: 812px) {
+@media screen and (max-width: 812px) {
   
-    header {
-      height: 75px;
-      h1 {
-      font-size: 40px;
-      }
-    }
-    .menu{
-        width: 100%;
-        height: 100%;
-        margin-top: 70px;
-        margin-bottom: 70px;
-    }
-    img {
-      width: 150px;
-      height: 210px;
-      margin: 15px 10px;
+  %zoom{
+    width: 150px;
+    height: 200px;
+  }
 
-      
+  header {
+    height: 75px;
+
+      h1 {
+        font-size: 40px;
+      }
+  }
+
+  .page-d-accueil{
+
+    .menu{
+      width: 100%;
+      height: 100%;
+      margin-top: 70px;
+      margin-bottom: 70px;
     }
-    .lien_transition{
-      height: auto;
-      font-size: 15px;
+  
+    .zoom{
+      @extend %zoom;
+      margin: 0 10px;
+
+      a{
+        @extend %zoom;
+      }
+
+      img {
+        @extend %zoom;
+      }
+
+    }
+ 
+    .download{
+      .lien_transition{
+        height: auto;
+        padding-left: 20px;
+        font-size: 20px;
         cursor: default;
-    }
-    footer{
-      height: 50px;
+      }
     }
 
   }
+
+  .mention-legal{
+
+    p{
+      font-size: 15px;
+    }
+
+  }
+
+  .la-palette-du-gout{
+
+    .aside{
+
+      .colonne1{
+        margin: 0px 10px 0px 0px;
+      }
+    }
+  }
+
+  h2{
+    font-size: 25px;
+  }  
+
+  .container{
+    margin-top: 50px;
+
+    .bg-color{
+      width: 100%;
+      margin: 0px;
+    }
+  }
+  
+  h3{
+    font-size: 20px;
+  }
+  
+  
+  .aside{
+    font-size: 10px;
+  }
+      
+  .colonne2{
+    margin-right: 10px;
+  }
+
+  
+
+  footer{
+    height: 50px;
+  }
+
+}
+
+@media screen and (max-width:568px){
+
+  .zoom img{
+    margin: 0px;
+  }
+ 
+  .colonne2{
+    &:nth-of-type(1){
+      margin-bottom: 10px;
+    }
+  }
+
+  .mention-legal{
+    p{
+      margin: 10px;
+      font-size: 10px;
+    }
+  }
+
+}
