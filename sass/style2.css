@@ -3,7 +3,7 @@
   height: 250px;
 }
 
-.la-note-enchantee .img_bas, .la-note-enchantee .titre, .aside, .container, footer, .mention-legal div, .page-d-accueil .download, .page-d-accueil .menu, header {
+.la-note-enchantee .img_bas, .la-note-enchantee .titre, main, footer, .mention-legal div, .page-d-accueil .download, .page-d-accueil .menu, header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,39 +76,54 @@ header h1 {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  -webkit-animation: silde 3s infinite;
-          animation: silde 3s infinite;
+  -webkit-animation: silde 1s linear 0.5s infinite;
+          animation: silde 1s linear 0.5s infinite;
+  vertical-align: center;
 }
 .page-d-accueil .cercle:nth-of-type(1) {
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
 }
 .page-d-accueil .cercle:nth-of-type(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.page-d-accueil .cercle:nth-of-type(3) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
 }
 @-webkit-keyframes silde {
-  from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
-  to {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
     opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes silde {
-  from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
-  to {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
     opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -160,6 +175,8 @@ footer {
   left: 0px;
   right: 0px;
   bottom: 0px;
+  -webkit-filter: drop-shadow(0 0 0.75rem #d4d0d0);
+          filter: drop-shadow(0 0 0.75rem #d4d0d0);
 }
 footer .lien_wiggle {
   font-size: 20px;
@@ -174,7 +191,6 @@ footer .lien_wiggle {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes shake {
   0% {
     -webkit-transform: translate(1px, 1px) rotate(0deg);
@@ -221,7 +237,6 @@ footer .lien_wiggle {
             transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-
 @keyframes shake {
   0% {
     -webkit-transform: translate(1px, 1px) rotate(0deg);
@@ -268,76 +283,44 @@ footer .lien_wiggle {
             transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-/*body{
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-size: cover; 
-    cursor: default;
-    header{
-        background-color:$color-primary; 
-        color: $color-text;
-    }
-    footer{
-      background-color: $color-primary; 
-
-    }
-}*/
-/*header {
-  @extend %flexbox;
-  width: 100%;
-  height: 250px;
-  padding-bottom: 65px;
-
-    h1{
-    font-size: 110px;
-    }
-}*/
-h2 {
-  text-align: center;
-  font-size: 35px;
-  margin: 10px 0px 70px 0px;
-}
 
 .container {
   font-family: cursive;
-}
-.container .bg-color {
-  width: 50%;
-  margin: 60px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  margin-top: 45px;
 }
 
 h3 {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: span 3;
   font-size: 25px;
 }
 
-.aside {
-  width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.aside .colonne1 {
+.colonne1 {
   text-align: left;
-  line-height: 32px;
-  margin: 0px 10px 0px 10px;
-  padding: 5px;
+  line-height: 30px;
+  margin: 0px 0px 20px 15px;
+  grid-column-end: span 2;
 }
 
 .colonne2 {
-  text-align: right;
-  line-height: 32px;
-  padding: 5px 0px 10px;
-  margin-top: 0px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 40px;
+  margin-left: 10px;
 }
 
-.la-note-enchantee .bg-color {
-  background-color: #FFD9C9;
-  color: #000;
+h2 {
+  text-align: center;
+  font-size: 30px;
+  grid-column-start: span 3;
+}
+
+.la-note-enchantee .container {
+  background-color: #fcdfdb;
+  color: black;
 }
 .la-note-enchantee .titre {
   -webkit-box-orient: vertical;
@@ -349,6 +332,8 @@ h3 {
           align-items: center;
   height: 200px;
   margin-bottom: 60px;
+  font-size: 30px;
+  grid-column-start: span 3;
 }
 .la-note-enchantee img {
   width: 100px;
@@ -374,6 +359,7 @@ h3 {
 .la-note-enchantee .img_bas {
   width: 100%;
   font-weight: bold;
+  grid-column-start: span 2;
 }
 .la-note-enchantee .img_bas img {
   margin: 0px 0px 5px;
@@ -385,7 +371,7 @@ h3 {
   margin: 50px 0px 0px 0px;
 }
 
-.le-chic-a-la-francaise .bg-color {
+.le-chic-a-la-francaise .container {
   background: -webkit-gradient(linear, left top, right top, from(#e66465), to(#9198e5));
   background: linear-gradient(to right, #e66465, #9198e5);
   -webkit-background-clip: text;
@@ -410,13 +396,12 @@ h3 {
           transform: scaleX(1);
 }
 
-.le-delice-des-papilles .bg-color {
+.le-delice-des-papilles .container {
   background: -webkit-gradient(linear, left top, right top, color-stop(10%, #3839FF), color-stop(75%, #94D8FF));
   background: linear-gradient(to right, #3839FF 10%, #94D8FF 75%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 600px;
 }
 .le-delice-des-papilles h3:after {
   display: block;
@@ -436,18 +421,23 @@ h3 {
           transform: scaleX(1);
 }
 
-.la-palette-du-gout .bg-color {
-  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #54D473), color-stop(75%, #A3D6B3));
-  background: linear-gradient(to right, #54D473 5%, #A3D6B3 75%);
+.la-palette-du-gout .container {
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #689F38), color-stop(95%, #C5E1A5));
+  background: linear-gradient(to right, #689F38 5%, #C5E1A5 95%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 600px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.la-palette-du-gout .colonne1 {
+  margin-bottom: 0px;
 }
 .la-palette-du-gout h3:after {
   display: block;
   content: "";
-  border-bottom: solid 3px #CFFFA3;
+  border-bottom: solid 3px #AED581;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -461,42 +451,4 @@ h3 {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
-
-/*footer {
-    @extend %flexbox;
-      margin-top: 50px;
-      justify-content: space-between;
-      height: 40px;
-      position: sticky;
-      top: 500px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;  
-      .lien_wiggle{
-          font-size: 20px;
-          text-align: justify;
-          margin: 10px 10px 0px 10px;
-          background-color: $color-primary;
-          color:$color-text;
-          text-decoration: none;
-      }
-
-    } 
-    .lien_wiggle:hover{
-      animation: shake 1s;
-      animation-iteration-count:infinite;
-    }
-    @keyframes shake {
-      0% { transform: translate(1px, 1px) rotate(0deg); }
-      10% { transform: translate(-1px, -2px) rotate(-1deg); }
-      20% { transform: translate(-3px, 0px) rotate(1deg); }
-      30% { transform: translate(3px, 2px) rotate(0deg); }
-      40% { transform: translate(1px, -1px) rotate(1deg); }
-      50% { transform: translate(-1px, 2px) rotate(-1deg); }
-      60% { transform: translate(-3px, 1px) rotate(0deg); }
-      70% { transform: translate(3px, 1px) rotate(-1deg); }
-      80% { transform: translate(-1px, -1px) rotate(1deg); }
-      90% { transform: translate(1px, 2px) rotate(0deg); }
-      100% { transform: translate(1px, -2px) rotate(-1deg); }
-      }*/
 /*# sourceMappingURL=style2.css.map */

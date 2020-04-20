@@ -3,79 +3,52 @@
 @import 'style.scss';
 
 
-/*body{
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-size: cover; 
-    cursor: default;
-    header{
-        background-color:$color-primary; 
-        color: $color-text;
-    }
-    footer{
-      background-color: $color-primary; 
-
-    }
-}*/
-
-/*header {
-  @extend %flexbox;
-  width: 100%;
-  height: 250px;
-  padding-bottom: 65px;
-
-    h1{
-    font-size: 110px;
-    }
-}*/
-
-h2{
-    text-align: center;
-    font-size: 35px;
-    margin: 10px 0px 70px 0px;
+main{
+    @extend %flexbox
 }
 
 .container{
-    @extend %flexbox; 
     font-family: cursive;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    margin-top: 45px;
 
-    .bg-color{
-    width: 50%;
-    margin: 60px;
-    }
 }
-
+        
 h3{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: span 3;
     font-size: 25px;
 }
 
-.aside{
-    @extend %flexbox;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    
-    .colonne1{
-        text-align: left;
-        line-height: 32px;
-        margin: 0px 10px 0px 10px;
-        padding: 5px;  
-    }
+.colonne1{
+    text-align: left;
+    line-height: 30px;
+    margin: 0px 0px 20px 15px;
+    grid-column-end: span 2;
+}
+  
+      
+  
+.colonne2{
+    line-height: 30px;
+    text-align: center;
+    margin-right: 40px;
+    margin-left: 10px;
 }
 
-.colonne2{
-    text-align: right;
-    line-height: 32px;
-    padding:5px 0px 10px;
-    margin-top: 0px;
+h2{
+    text-align: center;
+    font-size: 30px;
+    grid-column-start: span 3;
 }
 
 .la-note-enchantee{
 
-    .bg-color{
-    background-color: #FFD9C9;
-    color: #000;
+    .container{
+        background-color: #fcdfdb;
+        color: black; 
     }
 
     .titre{
@@ -84,6 +57,8 @@ h3{
         align-items: center;
         height: 200px;
         margin-bottom: 60px;
+        font-size: 30px;
+        grid-column-start: span 3;
     }
 
     img{
@@ -94,7 +69,7 @@ h3{
     h3:after{
         @include underline($border-color:rgb(49, 48, 48));
     }
-
+    
     h3:hover:after{
         transform: scaleX(1);
     } 
@@ -103,6 +78,7 @@ h3{
         @extend %flexbox;
         width: 100%;
         font-weight: bold;
+        grid-column-start: span 2; 
      
         img{
             margin: 0px 0px 5px;
@@ -115,10 +91,12 @@ h3{
             margin: 50px 0px 0px 0px;
         }
     }
-}
+}  
+
 
 .le-chic-a-la-francaise{
-    .bg-color{
+    
+    .container{
     @include gradient;
     }
 
@@ -133,9 +111,9 @@ h3{
 }
 
 .le-delice-des-papilles{
-    .bg-color{
+
+    .container{
         @include gradient ( $color1:#3839FF 10%, $color2:#94D8FF 75%);
-        width: 600px;
     }
 
     h3:after{
@@ -148,13 +126,19 @@ h3{
 }
 
 .la-palette-du-gout{
-    .bg-color{
-        @include gradient ( $color1:#54D473 5%, $color2: #A3D6B3 75%);
-        width: 600px;
+    
+
+    .container{
+        @include gradient ( $color1:#689F38 5%, $color2: #C5E1A5 95%);
+        align-items: center;
+    }
+
+    .colonne1{
+        margin-bottom: 0px;
     }
 
     h3:after{
-        @include underline($border-color: #CFFFA3);
+        @include underline($border-color: #AED581);
     }   
     
     h3:hover:after{
@@ -164,41 +148,5 @@ h3{
    
 }
 
-/*footer {
-    @extend %flexbox;
-      margin-top: 50px;
-      justify-content: space-between;
-      height: 40px;
-      position: sticky;
-      top: 500px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;  
-      .lien_wiggle{
-          font-size: 20px;
-          text-align: justify;
-          margin: 10px 10px 0px 10px;
-          background-color: $color-primary;
-          color:$color-text;
-          text-decoration: none;
-      }
-      
-    } 
-    .lien_wiggle:hover{
-      animation: shake 1s;
-      animation-iteration-count:infinite;
-    }
-    @keyframes shake {
-      0% { transform: translate(1px, 1px) rotate(0deg); }
-      10% { transform: translate(-1px, -2px) rotate(-1deg); }
-      20% { transform: translate(-3px, 0px) rotate(1deg); }
-      30% { transform: translate(3px, 2px) rotate(0deg); }
-      40% { transform: translate(1px, -1px) rotate(1deg); }
-      50% { transform: translate(-1px, 2px) rotate(-1deg); }
-      60% { transform: translate(-3px, 1px) rotate(0deg); }
-      70% { transform: translate(3px, 1px) rotate(-1deg); }
-      80% { transform: translate(-1px, -1px) rotate(1deg); }
-      90% { transform: translate(1px, 2px) rotate(0deg); }
-      100% { transform: translate(1px, -2px) rotate(-1deg); }
-      }*/
+ 
  
