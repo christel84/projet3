@@ -1,155 +1,193 @@
 
-$color-primary: #00897B;
-$color-text: #FBC02D;
+@import './util/variables';
+@import './util/mixin';
+@import './layout/accueil';
+@import './pages/index';
+@import 'responsive.scss';
 
-
-%zoom{
-  width: 200px;
-  height: 250px;
+.page{
+  @extend %flexbox
 }
 
-%flexbox{
-  display: flex;
-  justify-content: center;
+.container{
+  font-family: cursive;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  margin-top: 45px;
+
+}
+
+h2{
   text-align: center;
+  font-size: 30px;
+  grid-column-start: span 3;
+}
+      
+h3{
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  font-size: 25px;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: $color-text;
-    background-size: cover;
+.colonne1{
+  text-align: left;
+  line-height: 30px;
+  margin: 0px 0px 20px 15px;
+  grid-column-end: span 2;
+}
+
     
 
-    header{
-        background-color: $color-primary; 
-    }
-
-    footer{
-      background-color: $color-primary; 
-
-    }
+.colonne2{
+  line-height: 30px;
+  text-align: center;
+  margin-right: 40px;
+  margin-left: 10px;
 }
 
-header {
-  @extend %flexbox;
-  width: 100%;
-  height: 200px;
-  padding-bottom: 65px;
+
+
+.la-note-enchantee{
+
+  .container{
+      background-color: #fcdfdb;
+      color: black; 
+  }
+
+  .titre{
+      @extend %flexbox;
+      flex-direction: column;
+      align-items: center;
+      height: 200px;
+      margin-bottom: 60px;
+      font-size: 30px;
+      grid-column-start: span 3;
+  }
+
+  img{
+      width: 100px;
+      margin: 0px 0px 5px;    
+  }
+
+  h3:after{
+      @include underline($border-color:rgb(49, 48, 48));
+  }
   
-  h1{
-    font-size: 110px;
-    }
+  h3:hover:after{
+      transform: scaleX(1);
+  } 
+
+  .img_bas{
+      @extend %flexbox;
+      width: 100%;
+      font-weight: bold;
+      grid-column-start: span 2; 
+   
+      img{
+          margin: 0px 0px 5px;
+          width: 80px;
+          height: 100px;
+          margin-bottom: 90px;      
+      }
+      
+      .undertitle{
+          margin: 50px 0px 0px 0px;
+      }
+  }
+}  
+
+
+.le-chic-a-la-francaise{
+  
+  .container{
+  @include gradient;
+  }
+
+  h3:after{
+  @include underline;
+  }   
+
+  h3:hover:after{
+  transform: scaleX(1);
+  }
+
 }
 
-.page-d-accueil{
-  .menu{
-    @extend %flexbox;
-    margin-top: 100px;
-    margin-bottom: 50px;
+.le-delice-des-papilles{
+
+  .container{
+      @include gradient ( $color1:#3839FF 10%, $color2:#94D8FF 75%);
   }
 
-  .zoom{
-    @extend %zoom;
-    overflow: hidden;
-    margin: 30px;
-    filter: drop-shadow(0 0 0.75rem lightgrey);
+  h3:after{
+      @include underline($border-color: #799CFF);
+  }   
   
-    a{
-      display: inline-block;
-    }
+  h3:hover:after{
+      transform: scaleX(1);
+  }
+}
+
+.la-palette-du-gout{
+  
+
+  .container{
+      @include gradient ( $color1:#689F38 5%, $color2: #C5E1A5 95%);
+      align-items: center;
   }
 
-  img {
-    @extend %zoom;
-    transform: scale(1);
-    transition: transform 500ms;
-
-    &:hover{
-      transform: scale(1.3);
-      opacity: .4;
-    }
+  .colonne1{
+      margin-bottom: 0px;
   }
 
-  .download{
-    @extend %flexbox;
-    .lien_transition{
-      text-align: left;
-        padding: 10px;
-        width: 300px;
-        font-size: 25px;
-        border-radius: 15px;
-        cursor: default;
-    }
+  h3:after{
+      @include underline($border-color: #AED581);
+  }   
+  
+  h3:hover:after{
+      transform: scaleX(1);
   }
 
-  .cercle{
-    display: inline-block;
-    background: #575756;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    animation: silde 1s linear .5s infinite;
-    vertical-align: center;
-
-    &:nth-of-type(1) {
-      animation-delay: 0.15s;
-    }
-
-    &:nth-of-type(2){
-      animation-delay: 0.30s;
-    }
-
-    &:nth-of-type(3){
-      animation-delay: .45s;
-    }
-
-    @keyframes silde{
-      0%{
-        transform: translateY(0);
-        opacity: 1;
-      }
-      50%{
-        transform: translateY(-10px);
-        opacity: 0;
-      }
-      100%{
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  }
+ 
 }
 
 .mention-legal{
 
-  .container{
-    color: black;
-  }
-
-  .color{
-    color: $color-text;
-    text-decoration: underline $color-primary;
-  }
-
-  div{
-    @extend%flexbox;
-    justify-content: space-around;
-  }
-  .paragraph{
-    text-align: left;
-    line-height: 30px;
+  .bloc{
+    @extend %flexbox;
+    color: $color-secondary;
+    justify-content: space-between;
+    text-align: justify;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
   }
   
-  h2{
-    align-items: flex-start;
-    width: 250px;
+  .logo{
+    @extend %flexbox;
+    width: 100%;
+    text-align: center;
+    color:$color-text;
+
+  
+
   }
 
-  h3{
-    font-size: 12px;
-    text-align: right;
+  .bloc2{
+    margin: 30px 0px 40px 50px;
+  }
+
+  .bloc3{
+    @extend .bloc2;
+    margin-right: 40px;
+  }
+
+  
+
+  .note{
+    font-size: 10px;
+    color: $color-secondary;
   }
 
   .mail{
@@ -157,52 +195,7 @@ header {
   }
 }
 
-.lien{
-  background-color: $color-primary;
-  color:$color-text;
-  text-decoration: none;
-}
 
-footer {
-  @extend %flexbox;
-    margin-top: 50px;
-    justify-content: space-between;
-    height: 50px;
-    position: sticky;
-    top: 500px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    filter: drop-shadow(0 0 0.75rem rgb(212, 208, 208));
-    .lien_wiggle{
-        font-size: 20px;
-        height: 40px;
-        text-align: justify;
-        margin: 10px 10px 0px 10px;
-    }
-    
-  } 
-
-  .lien_wiggle:hover{
-    animation: shake 1s;
-    animation-iteration-count:infinite;
-
-
-    @keyframes shake {
-      0% { transform: translate(1px, 1px) rotate(0deg); }
-      10% { transform: translate(-1px, -2px) rotate(-1deg); }
-      20% { transform: translate(-3px, 0px) rotate(1deg); }
-      30% { transform: translate(3px, 2px) rotate(0deg); }
-      40% { transform: translate(1px, -1px) rotate(1deg); }
-      50% { transform: translate(-1px, 2px) rotate(-1deg); }
-      60% { transform: translate(-3px, 1px) rotate(0deg); }
-      70% { transform: translate(3px, 1px) rotate(-1deg); }
-      80% { transform: translate(-1px, -1px) rotate(1deg); }
-      90% { transform: translate(1px, 2px) rotate(0deg); }
-      100% { transform: translate(1px, -2px) rotate(-1deg); }
-    }
-
-  }
   
   
      

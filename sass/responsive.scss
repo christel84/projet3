@@ -1,83 +1,119 @@
 @media screen and (max-width: 812px) {
   
-  %zoom{
-    width: 150px;
-    height: 200px;
-  }
+    %zoom{
+        width: 200px;
+        height: 250px;
+    }
 
-  header {
-    height: 75px;
-
-      h1 {
-        font-size: 40px;
-      }
-  }
-
-  .page-d-accueil{
-
-    .menu{
-      width: 100%;
-      height: 100%;
-      margin-top: 70px;
-      margin-bottom: 70px;
+    header {
+      height: 75px;
+  
+        h1 {
+          font-size: 40px;
+        }
     }
   
-    .zoom{
-      @extend %zoom;
-      margin: 0 10px;
-
-      a{
-        @extend %zoom;
+    .container{
+        margin-top: 50px;
+        margin-left: 0;
+        margin-right: 0px;
+        font-size: 10px;
+        grid-template-columns: 4fr 1fr;
+    
+         .colonne1{
+            margin: 0px 10px 0px 0px;
+            grid-column-start: 1;
+          grid-column-end: span 2;
+          }
+  
+          .titre{
+              font-size: 25px;
+              grid-column-start: span 3;
+          }
+        
+  
       }
+  
+      h3{
+          grid-column-start: 1;
+          grid-column-end: span 3;
+          font-size: 20px;
+        }
+        
+          
+      .colonne2{
+        margin-right: 10px;
+      }
+  
+
+    .page-d-accueil{
+  
+      .ligne{
+        width: auto;
+        height: auto;
+        margin-top: 70px;
+        margin-bottom: 70px;
+      }
+    
+      .zoom{
+        
+        margin: 0 10px;
+      }
+  
 
       img {
-        @extend %zoom;
+        width: auto;
       }
 
-    }
- 
-    .download{
-      .lien_transition{
-        height: auto;
-        padding-left: 20px;
-        font-size: 20px;
-        cursor: default;
+   
+      .download{
+
+        .lien_transition{
+          height: auto;
+          width: auto;
+          padding-left: 20px;
+          font-size: 20px;
+        }
+
       }
-    }
-
-  }
-
-  .mention-legal{
-
-    p{
-      font-size: 15px;
-    }
-
-  }
-
-
-
   
+    }
+  
+    .mention-legal{
 
-  footer{
-    height: 50px;
-  }
+        main{
+            height: 100%;
+        }
 
+    }
+  
+   
+  
+    footer{
+      height: 50px;
+    }
+  
 }
 
 @media screen and (max-width:568px){
-
-  .zoom img{
-    margin: 0px;
-  }
- 
-
-  .mention-legal{
-    p{
-      margin: 10px;
-      font-size: 10px;
+  
+    .zoom img{
+      margin: 0px;
+      height: 210px;
     }
-  }
+   
+  
+    .mention-legal{
 
+      p{
+        margin: 10px;
+        font-size: 10px;
+      }
+
+    }
+
+    .colonne2{
+        margin: 0px;
+    }
 
 }
