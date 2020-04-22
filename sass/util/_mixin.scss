@@ -1,0 +1,15 @@
+@mixin gradient ($color1:#e66465, $color2:#9198e5) { 
+    background: linear-gradient(to right, $color1, $color2 );
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+}
+
+@mixin underline ($border-color:#FFCCC7) {
+display:block;
+content: '';
+border-bottom: solid 3px $border-color;
+transform: scaleX(0);  
+transition: transform 250ms ease-in-out;
+transform-origin:  0% 50%; 
+}

@@ -1,0 +1,20 @@
+$color-primary: #00897B;
+$color-text: #FBC02D;
+$color-secondary: black;
+
+%border{
+  border: solid $color-primary 2px;
+  border-radius: 20px;
+}
+
+%zoom{
+  width: 200px;
+  height: 250px;
+}
+
+%flexbox{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
