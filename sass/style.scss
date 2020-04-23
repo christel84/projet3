@@ -9,41 +9,34 @@
   @extend %flexbox
 }
 
-.container{
-  font-family: cursive;
-  display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
-  margin-top: 45px;
-
-}
-
 h2{
   text-align: center;
   font-size: 30px;
-  grid-column-start: span 3;
-}
-      
-h3{
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: span 3;
-  font-size: 25px;
 }
 
-.colonne1{
-  text-align: left;
-  line-height: 30px;
-  margin: 0px 0px 20px 15px;
-  grid-column-end: span 2;
+.container{
+  font-family: cursive;
+  margin-top: 45px;
+  color: $color-secondary; 
 }
 
-    
 
-.colonne2{
-  line-height: 30px;
-  text-align: center;
-  margin-right: 40px;
-  margin-left: 10px;
+table{
+  color: $color-secondary;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.cell-text{
+  text-align: justify;
+  padding-left: 10px;
+}
+
+.col2{
+  width: 75px;
+  text-align: right;
+  padding-right: 10px;
+
 }
 
 
@@ -52,7 +45,6 @@ h3{
 
   .container{
       background-color: #fcdfdb;
-      color: black; 
   }
 
   .titre{
@@ -62,7 +54,6 @@ h3{
       height: 200px;
       margin-bottom: 60px;
       font-size: 30px;
-      grid-column-start: span 3;
   }
 
   img{
@@ -100,9 +91,10 @@ h3{
 
 .le-chic-a-la-francaise{
   
-  .container{
+  h2{
   @include gradient;
   }
+
 
   h3:after{
   @include underline;
@@ -116,7 +108,7 @@ h3{
 
 .le-delice-des-papilles{
 
-  .container{
+  h2{
       @include gradient ( $color1:#3839FF 10%, $color2:#94D8FF 75%);
   }
 
@@ -132,13 +124,9 @@ h3{
 .la-palette-du-gout{
   
 
-  .container{
+  h2{
       @include gradient ( $color1:#689F38 5%, $color2: #C5E1A5 95%);
       align-items: center;
-  }
-
-  .colonne1{
-      margin-bottom: 0px;
   }
 
   h3:after{
