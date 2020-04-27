@@ -17,7 +17,7 @@
 
     }
   
-    img {
+    .hover {
       @extend %zoom;
       transform: scale(1);
       transition: transform 500ms;
@@ -32,14 +32,18 @@
   
     .download{
       @extend %flexbox;
-     
-  
+      align-items: center;
+      
       .lien_transition{
           text-align: left;
           font-size: 25px; 
           border-radius: 15px;
           cursor: default;
-        }
+          height: 30px;
+          width: 250px;
+          padding:0px 25px 0px 50px;
+      }
+          
 
     }
   

@@ -1,9 +1,9 @@
-img, .zoom {
+.hover, .zoom {
   width: 200px;
   height: 250px;
 }
 
-.mention-legal .logo, .mention-legal .bloc, .la-note-enchantee .img_bas, .la-note-enchantee .titre, .page, .download, .ligne, footer, header {
+.download, .ligne, footer, header, .la-note-enchantee .img_bas, .la-note-enchantee .titre, .page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,6 +11,481 @@ img, .zoom {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+}
+
+.container {
+  font-family: cursive;
+  margin-top: 45px;
+  color: black;
+  width: 630px;
+}
+.container h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 75px;
+  margin-bottom: 80px;
+}
+
+table {
+  color: black;
+  line-height: 20px;
+  text-align: justify;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+tr {
+  display: inline-block;
+}
+tr td {
+  padding: 15px;
+}
+
+.cell-text {
+  width: 450px;
+}
+
+.col2 {
+  text-align: right;
+  width: 250px;
+}
+
+.la-note-enchantee .container {
+  background-color: #fcdfdb;
+}
+.la-note-enchantee .titre {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.la-note-enchantee .titre h2 {
+  margin-top: 25px;
+}
+.la-note-enchantee .image {
+  width: 100px;
+  margin: 10px 0px 5px;
+}
+.la-note-enchantee h3:before, .la-note-enchantee h3:after {
+  content: "";
+  width: 9em;
+  border-bottom: solid 2px black;
+  display: inline-block;
+  vertical-align: middle;
+}
+.la-note-enchantee h3:before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.la-note-enchantee h3:after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+.la-note-enchantee ._size h3::before, .la-note-enchantee ._size h3::after {
+  content: "";
+  width: 11em;
+  border-bottom: solid 2px black;
+  display: inline-block;
+  vertical-align: middle;
+}
+.la-note-enchantee ._size10 h3::before, .la-note-enchantee ._size10 h3::after {
+  content: "";
+  width: 9.5em;
+  border-bottom: solid 2px black;
+  display: inline-block;
+  vertical-align: middle;
+}
+.la-note-enchantee .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #313030;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.la-note-enchantee .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.la-note-enchantee .img_bas {
+  width: 100%;
+  font-weight: bold;
+  grid-column-start: span 2;
+}
+.la-note-enchantee .img_bas img {
+  margin: 0px 0px 5px;
+  width: 80px;
+  height: 100px;
+  margin-bottom: 90px;
+}
+.la-note-enchantee .img_bas .undertitle {
+  margin: 50px 0px 0px 0px;
+}
+
+.le-chic-a-la-francaise .container {
+  background-color: #fff5fe;
+}
+.le-chic-a-la-francaise h2 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, #ce7d4d), color-stop(75%, #8f5bfe));
+  background: linear-gradient(to right, #ce7d4d 25%, #8f5bfe 75%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.le-chic-a-la-francaise .brown {
+  color: #c67412;
+}
+.le-chic-a-la-francaise .brown table {
+  color: #c67412;
+}
+.le-chic-a-la-francaise .brown h3::before, .le-chic-a-la-francaise .brown h3::after {
+  content: "";
+  width: 7em;
+  border-bottom: solid 2px #c67412;
+  display: inline-block;
+  vertical-align: middle;
+}
+.le-chic-a-la-francaise .brown h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.le-chic-a-la-francaise .brown h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+.le-chic-a-la-francaise .brown .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #c67412;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.le-chic-a-la-francaise .brown .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.le-chic-a-la-francaise .lightpurple {
+  color: #a56799;
+}
+.le-chic-a-la-francaise .lightpurple table {
+  color: #a56799;
+}
+.le-chic-a-la-francaise .lightpurple h3::before, .le-chic-a-la-francaise .lightpurple h3::after {
+  content: "";
+  width: 8em;
+  border-bottom: solid 2px #a56799;
+  display: inline-block;
+  vertical-align: middle;
+}
+.le-chic-a-la-francaise .lightpurple h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.le-chic-a-la-francaise .lightpurple h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+.le-chic-a-la-francaise .lightpurple .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #a56799;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.le-chic-a-la-francaise .lightpurple .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.le-chic-a-la-francaise .purple {
+  color: #6e4ccc;
+}
+.le-chic-a-la-francaise .purple table {
+  color: #6e4ccc;
+}
+.le-chic-a-la-francaise .purple h3::before, .le-chic-a-la-francaise .purple h3::after {
+  content: "";
+  width: 8em;
+  border-bottom: solid 2px #6e4ccc;
+  display: inline-block;
+  vertical-align: middle;
+}
+.le-chic-a-la-francaise .purple h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.le-chic-a-la-francaise .purple h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+.le-chic-a-la-francaise .purple .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #6e4ccc;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.le-chic-a-la-francaise .purple .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.le-delice-des-papilles .container {
+  background-color: #FAFAFA;
+}
+.le-delice-des-papilles h2 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #022ddf), color-stop(75%, #2879c0));
+  background: linear-gradient(to right, #022ddf 10%, #2879c0 75%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.le-delice-des-papilles .lightblue .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #64b2f6;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.le-delice-des-papilles .lightblue .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.le-delice-des-papilles .lightblue .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.le-delice-des-papilles .lightblue h3:before, .le-delice-des-papilles .lightblue h3:after {
+  content: "";
+  width: 8em;
+  border-bottom: solid 2px #64b2f6;
+  display: inline-block;
+  vertical-align: middle;
+}
+.le-delice-des-papilles .lightblue h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.le-delice-des-papilles .lightblue h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+.le-delice-des-papilles .blue .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #2879c0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.le-delice-des-papilles .blue .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.le-delice-des-papilles .blue .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.le-delice-des-papilles .blue h3:before, .le-delice-des-papilles .blue h3:after {
+  content: "";
+  width: 8em;
+  border-bottom: solid 2px #2879c0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.le-delice-des-papilles .blue h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.le-delice-des-papilles .blue h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+.le-delice-des-papilles .darkblue .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #022ddf;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.le-delice-des-papilles .darkblue .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.le-delice-des-papilles .darkblue .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.le-delice-des-papilles .darkblue h3:before, .le-delice-des-papilles .darkblue h3:after {
+  content: "";
+  width: 8em;
+  border-bottom: solid 2px #022ddf;
+  display: inline-block;
+  vertical-align: middle;
+}
+.le-delice-des-papilles .darkblue h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.le-delice-des-papilles .darkblue h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+
+.la-palette-du-gout .container {
+  background-color: #FAFAFA;
+}
+.la-palette-du-gout h2 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #6bb953), color-stop(95%, #bff88b));
+  background: linear-gradient(to right, #6bb953 5%, #bff88b 95%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.la-palette-du-gout .lightgreen .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #bff88b;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.la-palette-du-gout .lightgreen .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.la-palette-du-gout .lightgreen h3::before, .la-palette-du-gout .lightgreen h3::after {
+  content: "";
+  width: 8em;
+  border-bottom: solid 2px #bff88b;
+  display: inline-block;
+  vertical-align: middle;
+}
+.la-palette-du-gout .lightgreen h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.la-palette-du-gout .lightgreen h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+.la-palette-du-gout .green .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #AED581;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.la-palette-du-gout .green .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.la-palette-du-gout .green h3::before, .la-palette-du-gout .green h3::after {
+  content: "";
+  width: 8em;
+  border-bottom: solid 2px #AED581;
+  display: inline-block;
+  vertical-align: middle;
+}
+.la-palette-du-gout .green h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.la-palette-du-gout .green h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
+}
+.la-palette-du-gout .darkgreen .line-hover:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #6bb953;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+.la-palette-du-gout .darkgreen .line-hover:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.la-palette-du-gout .darkgreen h3::before, .la-palette-du-gout .darkgreen h3::after {
+  content: "";
+  width: 8em;
+  border-bottom: solid 2px #6bb953;
+  display: inline-block;
+  vertical-align: middle;
+}
+.la-palette-du-gout .darkgreen h3::before {
+  margin-left: -100%;
+  margin-right: 3em;
+}
+.la-palette-du-gout .darkgreen h3::after {
+  margin-right: -100%;
+  margin-left: 3em;
 }
 
 body {
@@ -30,10 +505,12 @@ body footer {
 header {
   width: 100%;
   height: 150px;
-  padding-bottom: 65px;
 }
 header h1 {
   font-size: 100px;
+  height: 150px;
+  width: auto;
+  margin-top: 0px;
 }
 
 .lien {
@@ -163,6 +640,213 @@ footer .lien_wiggle {
   }
 }
 
+@media screen and (max-width: 812px) and (max-width: 1024px) {
+  header {
+    height: 75px;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+
+  .la-note-enchantee .titre {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .la-note-enchantee h3::before, .la-note-enchantee h3::after {
+    content: "";
+    width: 10em;
+    border-bottom: solid 2px black;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .la-note-enchantee ._size h3::before, .la-note-enchantee ._size h3::after {
+    content: "";
+    width: 8em;
+    border-bottom: solid 2px black;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .la-note-enchantee ._size10 h3::before, .la-note-enchantee ._size10 h3::after {
+    content: "";
+    width: 7em;
+    border-bottom: solid 2px black;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .le-chic-a-la-francaise .brown h3::before, .le-chic-a-la-francaise .brown h3::after {
+    content: "";
+    width: 5em;
+    border-bottom: solid 2px #c67412;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .le-chic-a-la-francaise .lightpurple h3::before, .le-chic-a-la-francaise .lightpurple h3::after {
+    content: "";
+    width: 5.5em;
+    border-bottom: solid 2px #a56799;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .le-chic-a-la-francaise .purple h3::before, .le-chic-a-la-francaise .purple h3::after {
+    content: "";
+    width: 5em;
+    border-bottom: solid 2px #6e4ccc;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .le-delice-des-papilles .lightblue h3::before, .le-delice-des-papilles .lightblue h3::after {
+    content: "";
+    width: 7em;
+    border-bottom: solid 2px #64b2f6;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .le-delice-des-papilles .blue h3::before, .le-delice-des-papilles .blue h3::after {
+    content: "";
+    width: 7em;
+    border-bottom: solid 2px #2879c0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .le-delice-des-papilles .darkblue h3::before, .le-delice-des-papilles .darkblue h3::after {
+    content: "";
+    width: 7em;
+    border-bottom: solid 2px #022ddf;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .mention-legal .container {
+    margin-top: 30px;
+  }
+
+  .page-d-accueil .ligne {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  .page-d-accueil .zoom {
+    height: 200px;
+    width: 150px;
+    margin: 10px;
+  }
+  .page-d-accueil .zoom a {
+    height: 200px;
+    width: 150px;
+  }
+  .page-d-accueil img {
+    height: 200px;
+    width: 150px;
+  }
+  .page-d-accueil .download .lien_transition {
+    font-size: 20px;
+    width: auto;
+    height: auto;
+  }
+}
+@media screen and (max-width: 570px) {
+  h3, table {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .la-note-enchantee h3::before, .la-note-enchantee h3::after {
+    content: "";
+    width: 5em;
+    border-bottom: solid 2px black;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .le-chic-a-la-francaise .brown h3::before {
+    margin-right: 1.5em;
+  }
+  .le-chic-a-la-francaise .brown h3::after {
+    margin-left: 1.5em;
+  }
+
+  .le-delice-des-papilles .lightblue h3::before, .le-delice-des-papilles .lightblue h3::after {
+    content: "";
+    width: 3em;
+    border-bottom: solid 2px #64b2f6;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .le-delice-des-papilles .blue h3::before, .le-delice-des-papilles .blue h3::after {
+    content: "";
+    width: 3em;
+    border-bottom: solid 2px #2879c0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .le-delice-des-papilles .darkblue h3::before, .le-delice-des-papilles .darkblue h3::after {
+    content: "";
+    width: 3em;
+    border-bottom: solid 2px #022ddf;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .la-palette-du-gout .lightgreen h3::before, .la-palette-du-gout .lightgreen h3::after {
+    content: "";
+    width: 6em;
+    border-bottom: solid 2px #bff88b;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .la-palette-du-gout .green h3::before, .la-palette-du-gout .green h3::after {
+    content: "";
+    width: 4em;
+    border-bottom: solid 2px #AED581;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .la-palette-du-gout .darkgreen h3::before, .la-palette-du-gout .darkgreen h3::after {
+    content: "";
+    width: 4em;
+    border-bottom: solid 2px #6bb953;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .table {
+    line-height: 15px;
+  }
+
+  tr td {
+    width: 152px;
+  }
+
+  .cell-text {
+    text-align: left;
+    line-height: 20px;
+  }
+
+  .mention-legal .container {
+    width: auto;
+  }
+  .mention-legal .bloc2, .mention-legal .bloc3 {
+    margin: 20px;
+  }
+}
+.bloc2, .bloc3 {
+  margin: 30px 0px 40px 50px;
+}
+
+.bloc3 {
+  margin-right: 40px;
+}
+
+.note {
+  font-size: 10px;
+  color: black;
+}
+
+.mail {
+  color: #00897B;
+}
+
 .ligne {
   margin-top: 100px;
   margin-bottom: 50px;
@@ -178,7 +862,7 @@ footer .lien_wiggle {
   display: inline-block;
 }
 
-img {
+.hover {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform 500ms;
@@ -186,18 +870,26 @@ img {
   transition: transform 500ms;
   transition: transform 500ms, -webkit-transform 500ms;
 }
-img:hover {
+.hover:hover {
   background-color: lightgrey;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   opacity: 0.4;
 }
 
+.download {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .download .lien_transition {
   text-align: left;
   font-size: 25px;
   border-radius: 15px;
   cursor: default;
+  height: 30px;
+  width: 250px;
+  padding: 0px 25px 0px 50px;
 }
 
 .cercle {
@@ -255,257 +947,5 @@ img:hover {
             transform: translateY(0);
     opacity: 1;
   }
-}
-
-@media screen and (max-width: 812px) {
-  header {
-    height: 75px;
-  }
-  header h1 {
-    font-size: 40px;
-  }
-
-  .container {
-    margin-top: 50px;
-    margin-left: 0;
-    margin-right: 0px;
-    font-size: 12px;
-  }
-  .container .titre {
-    font-size: 25px;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-}
-.cell-text {
-  padding-left: 10px;
-}
-
-.page-d-accueil .ligne {
-  width: auto;
-  height: auto;
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-.page-d-accueil .zoom {
-  margin: 0 10px;
-}
-.page-d-accueil img {
-  width: auto;
-}
-.page-d-accueil .download .lien_transition {
-  font-size: 20px;
-}
-
-.mention-legal main {
-  height: 100%;
-}
-
-footer {
-  height: 50px;
-}
-
-@media screen and (max-width: 568px) {
-  .zoom img {
-    margin: 0px;
-    height: 210px;
-  }
-
-  .mention-legal p {
-    margin: 10px;
-    font-size: 12px;
-  }
-
-  .colonne2 {
-    margin: 0px;
-  }
-}
-h2 {
-  text-align: center;
-  font-size: 30px;
-}
-
-.container {
-  font-family: cursive;
-  margin-top: 45px;
-  color: black;
-}
-
-table {
-  color: black;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.cell-text {
-  text-align: justify;
-  padding-left: 10px;
-}
-
-.col2 {
-  width: 75px;
-  text-align: right;
-  padding-right: 10px;
-}
-
-.la-note-enchantee .container {
-  background-color: #fcdfdb;
-}
-.la-note-enchantee .titre {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 200px;
-  margin-bottom: 60px;
-  font-size: 30px;
-}
-.la-note-enchantee img {
-  width: 100px;
-  margin: 0px 0px 5px;
-}
-.la-note-enchantee h3:after {
-  display: block;
-  content: "";
-  border-bottom: solid 3px #313030;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-}
-.la-note-enchantee h3:hover:after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-.la-note-enchantee .img_bas {
-  width: 100%;
-  font-weight: bold;
-  grid-column-start: span 2;
-}
-.la-note-enchantee .img_bas img {
-  margin: 0px 0px 5px;
-  width: 80px;
-  height: 100px;
-  margin-bottom: 90px;
-}
-.la-note-enchantee .img_bas .undertitle {
-  margin: 50px 0px 0px 0px;
-}
-
-.le-chic-a-la-francaise h2 {
-  background: -webkit-gradient(linear, left top, right top, from(#e66465), to(#9198e5));
-  background: linear-gradient(to right, #e66465, #9198e5);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.le-chic-a-la-francaise h3:after {
-  display: block;
-  content: "";
-  border-bottom: solid 3px #FFCCC7;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-}
-.le-chic-a-la-francaise h3:hover:after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-.le-delice-des-papilles h2 {
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #3839FF), color-stop(75%, #94D8FF));
-  background: linear-gradient(to right, #3839FF 10%, #94D8FF 75%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.le-delice-des-papilles h3:after {
-  display: block;
-  content: "";
-  border-bottom: solid 3px #799CFF;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-}
-.le-delice-des-papilles h3:hover:after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-.la-palette-du-gout h2 {
-  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #689F38), color-stop(95%, #C5E1A5));
-  background: linear-gradient(to right, #689F38 5%, #C5E1A5 95%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.la-palette-du-gout h3:after {
-  display: block;
-  content: "";
-  border-bottom: solid 3px #AED581;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-}
-.la-palette-du-gout h3:hover:after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-.mention-legal .bloc {
-  color: black;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: justify;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-}
-.mention-legal .logo {
-  width: 100%;
-  text-align: center;
-  color: #FBC02D;
-}
-.mention-legal .bloc2, .mention-legal .bloc3 {
-  margin: 30px 0px 40px 50px;
-}
-.mention-legal .bloc3 {
-  margin-right: 40px;
-}
-.mention-legal .note {
-  font-size: 10px;
-  color: black;
-}
-.mention-legal .mail {
-  color: #00897B;
 }
 /*# sourceMappingURL=style.css.map */

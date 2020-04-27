@@ -1,15 +1,33 @@
-@mixin gradient ($color1:#e66465, $color2:#9198e5) { 
+@mixin gradient ($color1:#ce7d4d  25%, $color2:#8f5bfe 75%) { 
     background: linear-gradient(to right, $color1, $color2 );
         background-clip: text;
         -webkit-text-fill-color: transparent;
 
 }
 
-@mixin underline ($border-color:#FFCCC7) {
+@mixin underline ($border-color:#ca92bf) {
 display:block;
 content: '';
 border-bottom: solid 3px $border-color;
 transform: scaleX(0);  
 transition: transform 250ms ease-in-out;
 transform-origin:  0% 50%; 
+}
+
+@mixin line-decoration ($light:black, $size: 3em){
+    content: '';
+    width: $size;
+    border-bottom: solid 2px $light;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@mixin margin-before{
+    margin-left: -100%;
+    margin-right: 3em;
+}
+
+@mixin margin-after{
+    margin-right: -100%;
+    margin-left: 3em;
 }
