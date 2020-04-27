@@ -1,0 +1,392 @@
+.page{
+    @extend %flexbox
+}
+  
+.container{
+  font-family: cursive;
+  margin-top: 45px;
+  color: $color-secondary; 
+  width: 630px;
+
+  h2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 75px;
+    margin-bottom: 80px;
+  }
+
+}
+
+table{
+  color: $color-secondary;
+  line-height: 20px;
+  text-align: justify;
+  box-sizing: border-box;
+  width: 100%
+}
+  
+tr{
+  display: inline-block;
+
+  td{
+    padding: 15px;
+  }
+
+}
+
+.cell-text{
+    width: 450px;
+}
+
+.col2{
+    text-align: right;
+    width: 250px;
+    
+}
+  
+  
+.la-note-enchantee{
+  
+    .container{
+        background-color: #fcdfdb;
+    }
+  
+    .titre{
+        @extend %flexbox;
+        flex-direction: column;
+        align-items: center;
+        height: 200px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+  
+        h2{
+          margin-top: 25px;
+        }
+    }
+  
+    .image{
+        width: 100px;
+        margin: 10px 0px 5px;    
+    }
+  
+    h3:before, h3:after {
+      @include line-decoration ($size: 9em);
+    }
+
+
+    h3:before {
+      @include margin-before;
+    }
+    
+    h3:after {
+     @include margin-after;
+    }
+
+    ._size{
+      h3::before, h3::after{
+        @include line-decoration($size: 11em)
+      }
+    }
+
+    ._size10{
+      h3::before, h3::after{
+        @include line-decoration($size: 9.5em)
+      }
+    }
+
+    .line-hover:after{
+        @include underline($border-color:rgb(49, 48, 48));
+    }
+    
+    .line-hover:hover:after{
+        transform: scaleX(1);
+    } 
+  
+    .img_bas{
+        @extend %flexbox;
+        width: 100%;
+        font-weight: bold;
+        grid-column-start: span 2; 
+     
+        img{
+            margin: 0px 0px 5px;
+            width: 80px;
+            height: 100px;
+            margin-bottom: 90px;      
+        }
+        
+        .undertitle{
+            margin: 50px 0px 0px 0px;
+        }
+    }
+}  
+   
+.le-chic-a-la-francaise{
+  
+    .container{
+      background-color: #fff5fe;
+    }
+    
+    h2{
+    @include gradient;
+    }
+  
+    .brown{
+      color: $brown;
+      table{
+        color: $brown;
+      }
+
+      h3::before, h3::after{
+        @include line-decoration($light: $brown, $size: 7em);
+      }
+
+      h3::before{
+        @include margin-before;
+      }
+
+      h3::after{
+        @include margin-after;
+      }
+
+      .line-hover:after{
+        @include underline ($border-color: $brown);
+        }   
+      
+        .line-hover:hover:after{
+        transform: scaleX(1);
+        }
+
+    }
+  
+    .lightpurple{
+      color: $lightpurple;
+      table{
+        color: $lightpurple;
+      }
+
+      h3::before, h3::after{
+        @include line-decoration($light: $lightpurple, $size: 8em);
+      }
+
+      h3::before{
+        @include margin-before;
+      }
+
+      h3::after{
+        @include margin-after;
+      }
+
+      .line-hover:after{
+        @include underline ($border-color: $lightpurple);
+        }   
+      
+        .line-hover:hover:after{
+        transform: scaleX(1);
+        }
+    }
+  
+    .purple{
+      color: $purple;
+  
+      table{
+        color: $purple;
+      }
+
+      h3::before, h3::after{
+        @include line-decoration($light: $purple, $size:8em);
+      }
+
+      h3::before{
+        @include margin-before;
+      }
+
+      h3::after{
+        @include margin-after;
+      }
+
+      .line-hover:after{
+        @include underline ($border-color: $purple);
+        }   
+      
+        .line-hover:hover:after{
+        transform: scaleX(1);
+        }
+
+    }
+  
+}
+  
+.le-delice-des-papilles{
+  
+  .container{
+    background-color: #FAFAFA;
+  }
+  
+  h2{
+    @include gradient ( $color1:#022ddf 10%, $color2:#2879c0 75%);
+  }
+  
+  .lightblue{
+
+    .line-hover:after{
+      @include underline($border-color: $lightblue );
+    }   
+    
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+  
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+
+    h3:before, h3:after{
+      @include line-decoration ($light: $lightblue, $size: 8em);
+    }
+  
+    h3::before{
+      @include margin-before;
+    }
+  
+    h3::after{
+      @include margin-after;
+    }
+  }
+
+  .blue{
+
+    .line-hover:after{
+      @include underline($border-color: $blue );
+    }   
+    
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+  
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+
+    h3:before, h3:after{
+      @include line-decoration ($light: $blue, $size: 8em);
+    }
+  
+    h3::before{
+      @include margin-before;
+    }
+  
+    h3::after{
+      @include margin-after;
+    }
+  }
+
+  .darkblue{
+
+    .line-hover:after{
+      @include underline($border-color: $darkblue );
+    }   
+    
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+  
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+
+    h3:before, h3:after{
+      @include line-decoration ($light: $darkblue, $size: 8em);
+    }
+  
+    h3::before{
+      @include margin-before;
+    }
+  
+    h3::after{
+      @include margin-after;
+    }
+  }
+
+}
+  
+.la-palette-du-gout{
+    
+  .container{
+    background-color: #FAFAFA;
+  }
+  
+  h2{
+    @include gradient ( $color1: $darkgreen 5%, $color2: $lightgreen 95%);
+    align-items: center;
+  }
+  
+  .lightgreen{
+    .line-hover:after{
+      @include underline($border-color: $lightgreen);
+    }   
+    
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+
+    h3::before, h3::after{
+      @include line-decoration($light:$lightgreen, $size:8em);
+    }
+
+    h3::before{
+      @include margin-before
+    }
+
+    h3::after{
+      @include margin-after
+    }
+
+  }
+   
+  .green{
+    .line-hover:after{
+      @include underline($border-color: $green);
+    }   
+    
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+
+    h3::before, h3::after{
+      @include line-decoration($light:$green, $size: 8em);
+    }
+
+    h3::before{
+      @include margin-before
+    }
+
+    h3::after{
+      @include margin-after
+    }
+  }
+
+  .darkgreen{
+    .line-hover:after{
+      @include underline($border-color: $darkgreen);
+    }   
+    
+    .line-hover:hover:after{
+      transform: scaleX(1);
+    }
+
+    h3::before, h3::after{
+      @include line-decoration($light:$darkgreen, $size: 8em);
+    }
+
+    h3::before{
+      @include margin-before
+    }
+
+    h3::after{
+      @include margin-after
+    }
+  }
+
+
+}
