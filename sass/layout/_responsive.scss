@@ -1,4 +1,4 @@
-@media screen and (max-width: 812px) and (max-width:1024px){
+@media screen and (max-width: 720px){
 
   header {
     height: 75px;
@@ -14,219 +14,94 @@
       margin-top: 15px;
       margin-bottom: 30px;
     }
-
-    h3::before, h3::after{
-      @include line-decoration ($size: 10em);
-
-    }
-
-    ._size{
-
-      h3::before, h3::after{
-        @include line-decoration($size: 8em);
-  
-      }
-
-    }
-
-    ._size10{
-      
-      h3::before, h3::after{
-        @include line-decoration($size: 7em);
-  
-      }
-    }
-
   }
-    
+  
   .le-chic-a-la-francaise{
 
     .brown{
-      h3::before, h3::after{
-        @include line-decoration($light:$brown, $size:5em)
+       
+      hr{
+        width: 19%;
       }
     }
 
-    .lightpurple{
-      h3::before, h3::after{
-        @include line-decoration($light:$lightpurple,$size:5.5em)
-      }
-    }
-
-    .purple{
-      h3::before, h3::after{
-        @include line-decoration($light:$purple, $size:5em)
-      }
-    }
-
+    
   }
 
-  .le-delice-des-papilles{
-
-    .lightblue{
-
-      h3::before, h3::after{
-        @include line-decoration ($light: $lightblue, $size: 7em);
-      }
-
-    }
-
-    .blue{
-
-      h3::before, h3::after{
-        @include line-decoration ($light: $blue, $size: 7em);
-      }
-
-    }
-
-    .darkblue{
-
-      h3::before, h3::after{
-        @include line-decoration ($light: $darkblue, $size: 7em);
-      }
-
-    }
-
-  }
-  
   .la-palette-du-gout{
 
+    .green{
+
+      hr{
+        width: 28%;
+      }
+    }
+
+    .darkgreen{
+
+      hr{
+        width: 29%;
+      }
+    }
   }
+
 
   .mention-legal{
 
     .container{
       margin-top: 30px;
-      }
+    }
   }
   
-    .page-d-accueil{
+  .page-d-accueil{
 
-      .ligne{
-        margin-top: 70px;
-        margin-bottom: 70px;
-      }
-  
+    .ligne{
+      margin-top: 70px;
+      margin-bottom: 70px;
+
       .zoom{
         height: 200px;
         width: 150px;
         margin: 10px;
-  
+    
         a{
           height: 200px;
           width: 150px;
         }
       }
+    }
   
-      img{
-        height: 200px;
-        width: 150px;
-      }
+    
+  
+    img{
+      height: 200px;
+      width: 150px;
+    }
   
   
   
-      .download{
+    .download{
   
-        .lien_transition{
-          font-size: 20px;
-          width: auto;
-          height: auto;
-        }
-  
+      .lien_transition{
+        font-size: 20px;
+        width: auto;
+        height: auto;
       }
   
     }
+  
+  }
 
 
 
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 540px){
 
   
   h3, table{
       font-size: 13px;
       line-height: 15px;
-  }
-
-  .la-note-enchantee{
-
-    
-    h3::before, h3::after{
-      @include line-decoration($size:5em);
-    }
-
-  }
-
-
-  .le-chic-a-la-francaise{
-    
-    .brown{
-
-      h3::before{
-        margin-right: 1.5em ;
-      }
-
-      h3::after{
-        margin-left: 1.5em;
-      }
-    }
-  }
-
-  .le-delice-des-papilles{
-
-    .lightblue{
-
-      h3::before, h3::after{
-        @include line-decoration($light: $lightblue);
-      }
-
-    } 
-
-    .blue{
-
-      h3::before, h3::after{
-      @include line-decoration($light: $blue);
-      }
-      
-    }
-
-    .darkblue{
-
-      h3::before, h3::after{
-        @include line-decoration($light: $darkblue)
-      }
-
-    }
-
-  } 
-
-  .la-palette-du-gout{
-
-    .lightgreen{
-
-      h3::before, h3::after{
-        @include line-decoration($light:$lightgreen, $size: 6em);
-      }
-    
-    }
-
-    .green{
-
-      h3::before, h3::after{
-        @include line-decoration($light: $green, $size: 4em);
-      }
-
-    }
-
-    .darkgreen{
-
-      h3::before, h3::after{
-        @include line-decoration($light: $darkgreen, $size: 4em)
-      }
-
-    }
-
   }
 
   .table{
@@ -245,13 +120,85 @@
       line-height: 20px;
   }
 
+  .la-note-enchantee{
+     
+    .line1{
+      hr{
+        width: 30%;
+      }
+    }
+    
+  }
+
+  .le-chic-a-la-francaise{
+
+    .brown{
+      
+      hr{
+        width: 17%;
+      }
+    }
+
+    .lightpurple{
+
+      hr{
+      width: 25%;
+      }
+    }
+
+    .purple{
+
+      hr{
+        width: 23%;
+
+      }
+    }
+  }
+
+  .le-delice-des-papilles{
+
+    .lightblue{
+
+      hr{
+        width: 24%;
+      }
+    }
+
+    .blue{
+
+      hr{
+        width: 26%;
+      }
+    }
+
+    .darkblue{
+
+      hr{
+        width: 26%;
+      }
+    }
+  }
+
+  .la-palette-du-gout{
+
+    .green{
+
+      hr{
+        width: 26%;
+      }
+    }
+
+    .darkgreen{
+
+      hr{
+        width: 27%;
+      }
+    }
+  }
   .mention-legal{
 
     .container{
-      width: auto;
-    }
-    .bloc2, .bloc3{
-      margin: 20px;
+      width: auto ;
     }
 
   }

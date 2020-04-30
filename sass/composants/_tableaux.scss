@@ -44,7 +44,20 @@ tr{
     
 }
   
-  
+hr{
+  display: inline-block; 
+  background-color: $color-secondary; 
+  height: 2px;
+  width: 25%;
+  vertical-align: middle;
+}
+
+.line-hover{
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+}  
+
 .la-note-enchantee{
   
     .container{
@@ -68,32 +81,7 @@ tr{
         width: 100px;
         margin: 10px 0px 5px;    
     }
-  
-    h3:before, h3:after {
-      @include line-decoration ($size: 9em);
-    }
-
-
-    h3:before {
-      @include margin-before;
-    }
     
-    h3:after {
-     @include margin-after;
-    }
-
-    ._size{
-      h3::before, h3::after{
-        @include line-decoration($size: 11em)
-      }
-    }
-
-    ._size10{
-      h3::before, h3::after{
-        @include line-decoration($size: 9.5em)
-      }
-    }
-
     .line-hover:after{
         @include underline($border-color:rgb(49, 48, 48));
     }
@@ -106,8 +94,7 @@ tr{
         @extend %flexbox;
         width: 100%;
         font-weight: bold;
-        grid-column-start: span 2; 
-     
+
         img{
             margin: 0px 0px 5px;
             width: 80px;
@@ -132,21 +119,16 @@ tr{
     }
   
     .brown{
+
       color: $brown;
       table{
         color: $brown;
       }
 
-      h3::before, h3::after{
-        @include line-decoration($light: $brown, $size: 7em);
-      }
-
-      h3::before{
-        @include margin-before;
-      }
-
-      h3::after{
-        @include margin-after;
+      hr{
+        background-color: $brown;
+        width: 24% ;
+        border-color: $brown;
       }
 
       .line-hover:after{
@@ -165,16 +147,10 @@ tr{
         color: $lightpurple;
       }
 
-      h3::before, h3::after{
-        @include line-decoration($light: $lightpurple, $size: 8em);
-      }
-
-      h3::before{
-        @include margin-before;
-      }
-
-      h3::after{
-        @include margin-after;
+      hr{
+        background-color: $lightpurple;
+        width: 30% ;
+        border-color: $lightpurple;
       }
 
       .line-hover:after{
@@ -193,16 +169,10 @@ tr{
         color: $purple;
       }
 
-      h3::before, h3::after{
-        @include line-decoration($light: $purple, $size:8em);
-      }
-
-      h3::before{
-        @include margin-before;
-      }
-
-      h3::after{
-        @include margin-after;
+      hr{
+        background-color: $purple;
+        width: 28%;
+        border-color: $purple;
       }
 
       .line-hover:after{
@@ -233,24 +203,18 @@ tr{
       @include underline($border-color: $lightblue );
     }   
     
-    .line-hover:hover:after{
-      transform: scaleX(1);
-    }
-  
-    .line-hover:hover:after{
-      transform: scaleX(1);
-    }
+  hr{
+    background-color: $lightblue;
+    width: 27%;
+    border-color: $lightblue;
+  }
 
-    h3:before, h3:after{
-      @include line-decoration ($light: $lightblue, $size: 8em);
+    .line-hover:hover:after{
+      transform: scaleX(1);
     }
   
-    h3::before{
-      @include margin-before;
-    }
-  
-    h3::after{
-      @include margin-after;
+    .line-hover:hover:after{
+      transform: scaleX(1);
     }
   }
 
@@ -260,24 +224,18 @@ tr{
       @include underline($border-color: $blue );
     }   
     
-    .line-hover:hover:after{
-      transform: scaleX(1);
-    }
-  
-    .line-hover:hover:after{
-      transform: scaleX(1);
+    hr{
+      background-color: $blue;
+      width: 30%;
+      border-color: $blue;
     }
 
-    h3:before, h3:after{
-      @include line-decoration ($light: $blue, $size: 8em);
+    .line-hover:hover:after{
+      transform: scaleX(1);
     }
   
-    h3::before{
-      @include margin-before;
-    }
-  
-    h3::after{
-      @include margin-after;
+    .line-hover:hover:after{
+      transform: scaleX(1);
     }
   }
 
@@ -287,24 +245,18 @@ tr{
       @include underline($border-color: $darkblue );
     }   
     
-    .line-hover:hover:after{
-      transform: scaleX(1);
-    }
-  
-    .line-hover:hover:after{
-      transform: scaleX(1);
+    hr{
+      background-color: $darkblue;
+      width: 30%;
+      border-color: $darkblue;
     }
 
-    h3:before, h3:after{
-      @include line-decoration ($light: $darkblue, $size: 8em);
+    .line-hover:hover:after{
+      transform: scaleX(1);
     }
   
-    h3::before{
-      @include margin-before;
-    }
-  
-    h3::after{
-      @include margin-after;
+    .line-hover:hover:after{
+      transform: scaleX(1);
     }
   }
 
@@ -322,24 +274,19 @@ tr{
   }
   
   .lightgreen{
+
     .line-hover:after{
       @include underline($border-color: $lightgreen);
     }   
     
+    hr{
+      background-color: $lightgreen;
+      width: 36%;
+      border-color: $lightgreen;
+    }
+
     .line-hover:hover:after{
       transform: scaleX(1);
-    }
-
-    h3::before, h3::after{
-      @include line-decoration($light:$lightgreen, $size:8em);
-    }
-
-    h3::before{
-      @include margin-before
-    }
-
-    h3::after{
-      @include margin-after
     }
 
   }
@@ -349,20 +296,14 @@ tr{
       @include underline($border-color: $green);
     }   
     
+    hr{
+      background-color: $green;
+      width: 29%;
+      border-color: $green;
+    }
+
     .line-hover:hover:after{
       transform: scaleX(1);
-    }
-
-    h3::before, h3::after{
-      @include line-decoration($light:$green, $size: 8em);
-    }
-
-    h3::before{
-      @include margin-before
-    }
-
-    h3::after{
-      @include margin-after
     }
   }
 
@@ -371,20 +312,14 @@ tr{
       @include underline($border-color: $darkgreen);
     }   
     
+    hr{
+      background-color: $darkgreen;
+      border-color: $darkgreen;
+      width: 30%;
+    }
+
     .line-hover:hover:after{
       transform: scaleX(1);
-    }
-
-    h3::before, h3::after{
-      @include line-decoration($light:$darkgreen, $size: 8em);
-    }
-
-    h3::before{
-      @include margin-before
-    }
-
-    h3::after{
-      @include margin-after
     }
   }
 

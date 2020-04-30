@@ -8,6 +8,11 @@ body{
 
     header{
         background-color: $color-primary; 
+
+        a{
+          color: $color-text;
+          text-decoration: none;
+        }
     }
 
     footer{

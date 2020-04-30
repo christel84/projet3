@@ -1,18 +1,38 @@
-.bloc2{
-    margin: 30px 0px 40px 50px;
-}
+.mention-legal{
+
+    .container{
+        @extend %flexbox;
+        flex-direction: column;
+        width: auto;
+    }
+
+.second-containt{
+    @extend %flexbox;
+    background-color: #FAFAFA;
+
+    .bloc{
+        text-align: left;
+        padding-left: 30px;
+    }
   
-.bloc3{
-    @extend .bloc2;
-    margin-right: 40px;
-}
+    .bloc-1{
+        @extend .bloc;
+        margin-right: 40px;
+    }
     
-.note{
-    font-size: 10px;
-    color: $color-secondary;
-}
+    .note{
+        font-size: 10px;
+        color: $color-secondary;
+    }
   
-.mail{
-    color: $color-primary;
+    .mail{
+        color: $color-primary;
+    }
+
 }
-  
+
+    
+
+
+
+}  
